@@ -4,12 +4,14 @@
   "description": "A tiny, fully-featured set of array methods",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --reporter spec",
     "build": "tsc"
   },
   "author": "Niek_pas",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.0",
     "typescript": "^2.8.1"
   }
 }
