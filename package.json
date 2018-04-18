@@ -1,0 +1,11 @@
+{
+  "name": "brackets",
+  "version": "0.1.0",
+  "description": "A tiny, fully-featured set of array methods",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Niek_pas",
+  "license": "ISC"
+}
