@@ -1,0 +1,60 @@
+const expect = require('chai').expect;
+const squareBrackets = require('../dist/index');
+
+describe('isHomogeneous function test', () => {
+
+  it('should return true when given an array of strings', () => {
+    const arr = ['hello', "it's", 'the', 'police', 'please', 'open', 'up'];
+    const homogeneous = squareBrackets.isHomogeneous(arr);
+    expect(homogeneous).to.equal(true);
+  });
+
+  it('should return true when given an array of numbers', () => {
+    const arr = [1, 3, 5, 7, 79];
+    const homogeneous = squareBrackets.isHomogeneous(arr);
+    expect(homogeneous).to.equal(true);
+  });
+
+  it('should return true when given an array of objects', () => {
+    const arr = [1, 3, 5, 7, 79];
+    const homogeneous = squareBrackets.isHomogeneous(arr);
+    expect(homogeneous).to.equal(true);
+  });
+
+  it('should return true when given an array of arrays', () => {
+    const arr = [[1, 3], [5, 7], [79]];
+    const homogeneous = squareBrackets.isHomogeneous(arr);
+    expect(homogeneous).to.equal(true);
+  });
+
+  it('should return false when given a mixed array', () => {
+    const arr = [1, 3, 5, "hello", "world"];
+    const homogeneous = squareBrackets.isHomogeneous(arr);
+    expect(homogeneous).to.equal(false);
+  });
+
+  it('should return false when given a sneaky mixed array', () => {
+    const arr = [1, 3, 5, "6", "7"];
+    const homogeneous = squareBrackets.isHomogeneous(arr);
+    expect(homogeneous).to.equal(false);
+  });
+
+  it('should return false when given undefined', () => {
+    const arr = undefined;
+    const homogeneous = squareBrackets.isHomogeneous(arr);
+    expect(homogeneous).to.equal(false);
+  });
+
+  it('should return false when given null', () => {
+    const arr = null;
+    const homogeneous = squareBrackets.isHomogeneous(arr);
+    expect(homogeneous).to.equal(false);
+  });
+
+  it('should return false when given a string', () => {
+    const arr = "hello";
+    const homogeneous = squareBrackets.isHomogeneous(arr);
+    expect(homogeneous).to.equal(false);
+  });
+
+});
