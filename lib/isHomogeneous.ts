@@ -9,14 +9,14 @@ const isHomogeneous = function (arr: Array<any>): boolean {
   let prevType = undefined;
 
   for (let i = 0; i < arr.length; i++) {
-      let type = isArray(arr[i]) ? 'array' : typeof arr[i];
-      if (prevType !== undefined && prevType !== type) {
-        homogeneous = false;
-        break;
-      }
-      prevType = type;
+    let type = isArray(arr[i]) ? 'array' : typeof arr[i];
+    if (prevType !== undefined && prevType !== type) {
+      homogeneous = false;
+      break;
+    }
+    prevType = type;
   }
-  
+
   return homogeneous;
 }
 

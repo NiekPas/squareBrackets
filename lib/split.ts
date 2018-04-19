@@ -1,6 +1,6 @@
 const isArray = require('./isArray');
 
-const split = function(arr: Array<any>, n: number = 2): Array<any> {
+const split = function (arr: Array<any>, n: number = 2): Array<any> {
   if (!isArray(arr)) {
     return arr;
   }
