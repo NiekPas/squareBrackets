@@ -1,4 +1,10 @@
+const isArray = require('./isArray');
+
 const sort = function (arr: Array<any>, reverse: boolean = false): Array<any> {
+  if (!isArray(arr)) {
+    return arr;
+  }
+  
   // check if the array is all numbers
   let isArrayOfNumbers = true;
   for (let i = 0; i < arr.length; i++) {

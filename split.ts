@@ -1,5 +1,7 @@
+const isArray = require('./isArray');
+
 const split = function(arr: Array<any>, n: number = 2): Array<any> {
-  if (arr === undefined || arr === null || typeof arr !== 'object') {
+  if (!isArray(arr)) {
     return arr;
   }
   // We need to test this seperately in case arr is not an array, since that would throw fon undefined property
