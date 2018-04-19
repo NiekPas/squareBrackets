@@ -2,7 +2,7 @@
   "name": "brackets",
   "version": "0.1.0",
   "description": "A tiny, fully-featured set of array methods",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "mocha --reporter spec",
     "build": "tsc"
