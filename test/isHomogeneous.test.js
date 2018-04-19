@@ -16,7 +16,14 @@ describe('isHomogeneous function test', () => {
   });
 
   it('should return true when given an array of objects', () => {
-    const arr = [1, 3, 5, 7, 79];
+    const arr = [
+      { name: 'Will', age: '47' },
+      { species: 'Cat', food: 'milk' },
+      { species: 'Cow', food: 'grass' },
+      { id: '839012', fullName: 'Jason Voorhees', numKilled: 86 },
+      { name: 'coffee', rating: 10, primaryUse: 'giving meaning to life' },
+      { language: 'Javascript', users: 'many', typeSystem: 'probably not' }
+    ];
     const homogeneous = squareBrackets.isHomogeneous(arr);
     expect(homogeneous).to.equal(true);
   });
