@@ -7,5 +7,6 @@ const isHeterogeneous = require('./lib/isHeterogeneous');
 const sample = require('./lib/sample');
 const take = require('./lib/take');
 const first = require('./lib/first');
+const last = require('./lib/last');
 
-export = {sort, reverse, split, isArray, isHomogeneous, isHeterogeneous, sample, take, first};
+export = {sort, reverse, split, isArray, isHomogeneous, isHeterogeneous, sample, take, first, last};
