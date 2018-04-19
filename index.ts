@@ -4,5 +4,6 @@ const split = require('./lib/split');
 const isArray = require('./lib/isArray');
 const isHomogeneous = require('./lib/isHomogeneous');
 const isHeterogeneous = require('./lib/isHeterogeneous');
+const sample = require('./lib/sample');
 
-export = {sort, reverse, split, isArray, isHomogeneous, isHeterogeneous};
+export = {sort, reverse, split, isArray, isHomogeneous, isHeterogeneous, sample};
