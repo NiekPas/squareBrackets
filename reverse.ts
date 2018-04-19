@@ -1,4 +1,4 @@
-const reverse = function(arr: Array<any>): Array<any> {
+const reverse = function (arr: Array<any>): Array<any> {
   return arr.reverse();
 }
 
