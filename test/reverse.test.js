@@ -15,4 +15,42 @@ describe('reverse function test', () => {
     expect(reversedArr).to.deep.equal(["elit", "adipiscing", "consectetur", "amet", "sit", "dolor", "ipsum", "lorem"]);
   });
 
+  it('should reverse an array of arrays', () => {
+    const arr = [[1, 3], [1, 6], ["strings", "are", "friends"], ['yup', 'dup']];
+    const reversedArr = squareBrackets.reverse(arr);
+    expect(reversedArr).to.deep.equal([['yup', 'dup'], ["strings", "are", "friends"], [1, 6], [1, 3]]);
+  });
+
+  it('should reverse an array of objects', () => {
+    const arr = [
+      { name: 'Will', age: '47' },
+      { species: 'Cat', food: 'milk' },
+      { species: 'Cow', food: 'grass' },
+      { id: '839012', fullName: 'Jason Voorhees', numKilled: 86 },
+      { name: 'coffee', rating: 10, primaryUse: 'giving meaning to life' },
+      { language: 'Javascript', users: 'many', typeSystem: 'probably not' }
+    ];
+    const reversedArr = squareBrackets.reverse(arr);
+    expect(reversedArr).to.deep.equal([
+      { language: 'Javascript', users: 'many', typeSystem: 'probably not' },
+      { name: 'coffee', rating: 10, primaryUse: 'giving meaning to life' },
+      { id: '839012', fullName: 'Jason Voorhees', numKilled: 86 },
+      { species: 'Cow', food: 'grass' },
+      { species: 'Cat', food: 'milk' },
+      { name: 'Will', age: '47' },
+    ]);
+  });
+
+  it('should return null when given null', () => {
+    const arr = null;
+    const reversedArr = squareBrackets.reverse(arr);
+    expect(reversedArr).to.equal(null);
+  });
+
+  it('should return undefined when given undefined', () => {
+    const arr = undefined;
+    const reversedArr = squareBrackets.reverse(arr);
+    expect(reversedArr).to.equal(undefined);
+  });
+
 });
