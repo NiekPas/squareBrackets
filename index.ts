@@ -8,5 +8,6 @@ const sample = require('./lib/sample');
 const take = require('./lib/take');
 const first = require('./lib/first');
 const last = require('./lib/last');
+const compress = require('./lib/compress');
 
-export = {sort, reverse, split, isArray, isHomogeneous, isHeterogeneous, sample, take, first, last};
+export = {sort, reverse, split, isArray, isHomogeneous, isHeterogeneous, sample, take, first, last, compress};
