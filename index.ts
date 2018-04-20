@@ -5,6 +5,7 @@ const isArray = require('./lib/isArray');
 const isHomogeneous = require('./lib/isHomogeneous');
 const isHeterogeneous = require('./lib/isHeterogeneous');
 const sample = require('./lib/sample');
+const sampleDistinct = require ('./lib/sampleDistinct');
 const take = require('./lib/take');
 const first = require('./lib/first');
 const last = require('./lib/last');
@@ -23,6 +24,7 @@ export = {
   removeEmpty,
   reverse,
   sample,
+  sampleDistinct,
   sort,
   split,
   take,
