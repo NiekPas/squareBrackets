@@ -6,7 +6,9 @@
     "jsRules": {},
     "rules": {
         "only-arrow-functions": false,
-        "no-var-requires": false
+        "no-var-requires": false,
+        "quotemark": [true, "single", "avoid-escape", "avoid-template"],
+        "prefer-for-of": false      // For-of is not supported in IE
     },
     "rulesDirectory": []
 }
