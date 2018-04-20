@@ -1,4 +1,4 @@
-const isArray = require("./isArray");
+const isArray = require('./isArray');
 
 /**
  * Returns a new array with all empty values removed,
@@ -30,7 +30,7 @@ const compress = function(arr: any[]): any[] {
     }
 
     // check if string is empty or whitespace
-    if (typeof element === "string" && !/[^\s]/.test(compressedArr[i])) {
+    if (typeof element === 'string' && !/[^\s]/.test(compressedArr[i])) {
       compressedArr.splice(i, 1);
       i--;
       continue;
@@ -42,7 +42,7 @@ const compress = function(arr: any[]): any[] {
       continue;
     }
 
-    if (typeof element === "object" && JSON.stringify(element) === JSON.stringify({})) {
+    if (typeof element === 'object' && JSON.stringify(element) === JSON.stringify({})) {
       compressedArr.splice(i, 1);
       i--;
       continue;

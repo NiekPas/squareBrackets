@@ -1,6 +1,6 @@
 const isArray = require('./isArray');
 
-const split = function (arr: Array<any>, n: number = 2): Array<any> {
+const split = function(arr: any[], n: number = 2): any[] {
   if (!isArray(arr)) {
     return arr;
   }
@@ -10,7 +10,7 @@ const split = function (arr: Array<any>, n: number = 2): Array<any> {
   }
 
   const numberOfSplits = Math.floor(arr.length / n);      // 7/2 = 3.5, floored: 3
-  let splitArray: any[] = [];
+  const splitArray: any[] = [];
   let previousSplitPoint = 0;
 
   // split the array
@@ -22,9 +22,9 @@ const split = function (arr: Array<any>, n: number = 2): Array<any> {
   }
 
   // push any trailing elements
-  const arrayPortion = arr.slice(previousSplitPoint, arr.length)
-  splitArray.push(arrayPortion);
+  const trailingElements = arr.slice(previousSplitPoint, arr.length);
+  splitArray.push(trailingElements);
   return splitArray;
-}
+};
 
 export = split;

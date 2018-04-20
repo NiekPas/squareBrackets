@@ -1,7 +1,7 @@
 const isArray = require('./isArray');
 
-const sample = function (arr: Array<any>, numberOfElements: number = 1): any {
-  let sampledElements: Array<any> = [];
+const sample = function(arr: any[], numberOfElements: number = 1): any {
+  const sampledElements: any[] = [];
   if (!isArray(arr)) {
     return arr;
   }
@@ -11,6 +11,6 @@ const sample = function (arr: Array<any>, numberOfElements: number = 1): any {
   }
 
   return numberOfElements === 1 ? sampledElements[0] : sampledElements;
-}
+};
 
 export = sample;
