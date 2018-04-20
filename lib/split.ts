@@ -4,8 +4,8 @@ const isArray = require('./isArray');
  * If `n` is undefined, this function returns an array containing 2 arrays,
  * one equal to the first half of the original array, and one equal to the last half.
  * If `arr` cannot be evenly split (e.g. an array of 5 elements split into 2),
- * the trailing elements will be added to the last array, as follows:
- *     squareBrackets.split([1, 2, 3, 4, 5]);   // returns [[1, 2], [3, 4, 5]]
+ * the trailing elements will be added to the last array, as follows:<br><br>
+ * `squareBrackets.split([1, 2, 3, 4, 5]);   // returns [[1, 2], [3, 4, 5]]`<br><br>
  * To split an array into two halves based on a callback function, see {@link bifurcate}.
  * @param  {any[]} arr The array to be split.
  * @param  {number} [n = 2] The number of arrays to split the original array into.
