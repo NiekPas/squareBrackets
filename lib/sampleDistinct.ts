@@ -9,7 +9,7 @@ const isArray = require('./isArray');
  * @param  {number} [numberOfElements = 1]
  * @returns {any} Either a single randomly picked element, or an array of randomly picked elements.
  */
-const sample = function(arr: any[], numberOfElements: number = 1): any {
+const sampleDistinct = function(arr: any[], numberOfElements: number = 1): any {
   // We don't want to run splice on the original array, since that would be unexpectedly destructive to the end user,
   // so we create a copy by calling slice() without arguments.
   const originalArr = arr.slice();
@@ -31,4 +31,4 @@ const sample = function(arr: any[], numberOfElements: number = 1): any {
   return numberOfElements === 1 ? sampledElements[0] : sampledElements;
 };
 
-export = sample;
+export = sampleDistinct;
