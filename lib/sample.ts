@@ -7,7 +7,7 @@ const isArray = require('./isArray');
  * i.e. it may return the same value several times.
  * See also {@link sampleDistinct}.
  * @param  {any[]} arr The array from which to be sampled.
- * @param  {number=1} numberOfElements
+ * @param  {number} [numberOfElements = 1]
  * @returns {any} Either a single randomly picked element, or an array of randomly picked elements.
  */
 const sample = function(arr: any[], numberOfElements: number = 1): any {
