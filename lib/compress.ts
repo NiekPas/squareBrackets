@@ -1,7 +1,7 @@
 const isArray = require('./isArray');
 
 /**
- * Returns a new array with all empty values removed,
+ * This function returns a new array with all empty values removed,
  * barring any nested arrays or objects (see also {@link deepCompress}).
  * When supplied with a value that is not an array, it returns the original value.
  * The values considered empty are the following:
@@ -9,8 +9,8 @@ const isArray = require('./isArray');
  * * Empty and whitespace-only strings (`''`, `""`, `' '`, `" \n \t "`, etc.).
  * * Empty arrays
  * * Empty objects
- * @param  {Array} arr the array to compress.
- * @returns {Array} the compressed array.
+ * @param  {any[]} arr The array to compress.
+ * @returns {any[]} The compressed array.
  */
 const compress = function(arr: any[]): any[] {
   if (!isArray(arr)) {
