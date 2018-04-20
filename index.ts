@@ -10,6 +10,7 @@ const first = require('./lib/first');
 const last = require('./lib/last');
 const compress = require('./lib/compress');
 const bifurcate = require('./lib/bifurcate');
+const removeEmpty = require('./lib/removeEmpty');
 
 export = {
   bifurcate,
@@ -19,6 +20,7 @@ export = {
   isHeterogeneous,
   isHomogeneous,
   last,
+  removeEmpty,
   reverse,
   sample,
   sort,
