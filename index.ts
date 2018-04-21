@@ -1,17 +1,17 @@
-const sort = require('./lib/sort');
-const reverse = require('./lib/reverse');
-const split = require('./lib/split');
-const isArray = require('./lib/isArray');
-const isHomogeneous = require('./lib/isHomogeneous');
+const bifurcate       = require('./lib/bifurcate');
+const compress        = require('./lib/compress');
+const first           = require('./lib/first');
+const isArray         = require('./lib/isArray');
 const isHeterogeneous = require('./lib/isHeterogeneous');
-const sample = require('./lib/sample');
-const sampleDistinct = require ('./lib/sampleDistinct');
-const take = require('./lib/take');
-const first = require('./lib/first');
-const last = require('./lib/last');
-const compress = require('./lib/compress');
-const bifurcate = require('./lib/bifurcate');
-const removeEmpty = require('./lib/removeEmpty');
+const isHomogeneous   = require('./lib/isHomogeneous');
+const last            = require('./lib/last');
+const removeEmpty     = require('./lib/removeEmpty');
+const reverse         = require('./lib/reverse');
+const sample          = require('./lib/sample');
+const sampleDistinct  = require('./lib/sampleDistinct');
+const sort            = require('./lib/sort');
+const split           = require('./lib/split');
+const take            = require('./lib/take');
 
 export = {
   bifurcate,
