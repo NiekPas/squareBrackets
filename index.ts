@@ -6,6 +6,7 @@ const isEqual           = require('./lib/isEqual');
 const isHeterogeneous   = require('./lib/isHeterogeneous');
 const isHomogeneous     = require('./lib/isHomogeneous');
 const last              = require('./lib/last');
+const removeDuplicates  = require('./lib/removeDuplicates');
 const removeEmpty       = require('./lib/removeEmpty');
 const reverse           = require('./lib/reverse');
 const sample            = require('./lib/sample');
@@ -23,6 +24,7 @@ export = {
   isHeterogeneous,
   isHomogeneous,
   last,
+  removeDuplicates,
   removeEmpty,
   reverse,
   sample,
