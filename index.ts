@@ -1,5 +1,6 @@
 const bifurcate         = require('./lib/bifurcate');
 const compress          = require('./lib/compress');
+const distinctLength    = require('./lib/distinctLength');
 const first             = require('./lib/first');
 const isArray           = require('./lib/isArray');
 const isEqual           = require('./lib/isEqual');
@@ -18,6 +19,7 @@ const take              = require('./lib/take');
 export = {
   bifurcate,
   compress,
+  distinctLength,
   first,
   isArray,
   isEqual,
