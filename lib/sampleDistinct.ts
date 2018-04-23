@@ -24,8 +24,8 @@ const sampleDistinct = function(arr: any[], numberOfElements: number = 1): any {
   const sampledElements: any[] = [];
 
   for (let i = 0; i < numberOfElements; i++) {
-    const el = originalArr[Math.floor(Math.random() * arr.length)];
-    originalArr.splice(arr.indexOf(el), 1);
+    const randomIndex = Math.floor(Math.random() * originalArr.length);
+    const el = originalArr.splice(randomIndex, 1)[0];
     sampledElements.push(el);
   }
 
