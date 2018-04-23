@@ -18,7 +18,7 @@ describe('sample function test', () => {
       expect(arr).to.include(sampledElements[2]),
       expect(arr).to.include(sampledElements[3]),
       expect(arr).to.include(sampledElements[4])
-    ]);  
+    ]);
   });
 
   it('should return the original value when it is invaled', () => {
