@@ -12,6 +12,7 @@ const removeEmpty       = require('./lib/removeEmpty');
 const reverse           = require('./lib/reverse');
 const sample            = require('./lib/sample');
 const sampleDistinct    = require('./lib/sampleDistinct');
+const shuffle           = require('./lib/shuffle');
 const sort              = require('./lib/sort');
 const split             = require('./lib/split');
 const take              = require('./lib/take');
@@ -31,6 +32,7 @@ export = {
   reverse,
   sample,
   sampleDistinct,
+  shuffle,
   sort,
   split,
   take,
