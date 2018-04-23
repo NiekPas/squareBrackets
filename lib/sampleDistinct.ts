@@ -14,9 +14,9 @@ const sampleDistinct = function(arr: any[], numberOfElements: number = 1): any {
     return arr;
   }
 
-  if (numberOfElements >= arr.length) {
-    return arr;
-  }
+  // If numberOfElements is greater than the number of elements in the array,
+  // reduce it so we don't run into out of bounds errors.
+  numberOfElements = numberOfElements > arr.length ? arr.length : numberOfElements;
 
   // We don't want to run splice on the original array, since that would be unexpectedly destructive to the end user,
   // so we create a copy by calling slice() without arguments.
