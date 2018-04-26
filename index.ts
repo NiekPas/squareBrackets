@@ -8,6 +8,7 @@ const isHeterogeneous   = require('./lib/isHeterogeneous');
 const isHomogeneous     = require('./lib/isHomogeneous');
 const last              = require('./lib/last');
 const map               = require('./lib/map');
+const padLeft           = require('./lib/padLeft');
 const removeDuplicates  = require('./lib/removeDuplicates');
 const removeEmpty       = require('./lib/removeEmpty');
 const reverse           = require('./lib/reverse');
@@ -29,6 +30,7 @@ export = {
   isHomogeneous,
   last,
   map,
+  padLeft,
   removeDuplicates,
   removeEmpty,
   reverse,
