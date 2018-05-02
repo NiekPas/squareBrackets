@@ -21,10 +21,9 @@ describe('sample function test', () => {
     ]);
   });
 
-  it('should return the original value when it is invaled', () => {
+  it('should throw an error when given a non-array', () => {
     const notAnArray = 'a string instead';
-    const returnValue = squareBrackets.sample(notAnArray);
-    expect(returnValue).to.equal(notAnArray);
+    expect(squareBrackets.sample.bind(squareBrackets, notAnArray)).to.throw(`invalid input: expected arr to be an array, but it is of type 'string'`);
   });
 
 });

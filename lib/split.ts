@@ -13,11 +13,11 @@ const isArray = require('./isArray');
  */
 const split = function(arr: any[], n: number = 2): any[] {
   if (!isArray(arr)) {
-    return arr;
+    throw new Error(`invalid input: expected arr to be an array, but it is of type '${typeof arr}'`);
   }
   // We need to test this seperately in case arr is not an array, since that would throw fon undefined property
   if (arr.length < 2) {
-    return arr;
+    throw new Error(`invalid input: expected array length to be at least 2, but it is ${arr.length}`);
   }
 
   const numberOfSplits = Math.floor(arr.length / n);      // 7/2 = 3.5, floored: 3

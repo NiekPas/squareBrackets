@@ -46,22 +46,9 @@ describe('isHeterogeneous function test', () => {
     expect(heterogeneous).to.equal(true);
   });
 
-  it('should return false when given undefined', () => {
-    const arr = undefined;
-    const heterogeneous = squareBrackets.isHeterogeneous(arr);
-    expect(heterogeneous).to.equal(false);
-  });
-
-  it('should return false when given null', () => {
-    const arr = null;
-    const heterogeneous = squareBrackets.isHeterogeneous(arr);
-    expect(heterogeneous).to.equal(false);
-  });
-
-  it('should return false when given a string', () => {
-    const arr = "hello";
-    const heterogeneous = squareBrackets.isHeterogeneous(arr);
-    expect(heterogeneous).to.equal(false);
+  it('should throw an error when given a non-array', () => {
+    const notAnArray = 'a string instead';
+    expect(squareBrackets.isHeterogeneous.bind(squareBrackets, notAnArray)).to.throw(`invalid input: expected arr to be an array, but it is of type 'string'`);
   });
 
 });

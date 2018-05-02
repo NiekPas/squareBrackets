@@ -41,16 +41,9 @@ describe('reverse function test', () => {
     ]);
   });
 
-  it('should return null when given null', () => {
-    const arr = null;
-    const reversedArr = squareBrackets.reverse(arr);
-    expect(reversedArr).to.equal(null);
-  });
-
-  it('should return undefined when given undefined', () => {
-    const arr = undefined;
-    const reversedArr = squareBrackets.reverse(arr);
-    expect(reversedArr).to.equal(undefined);
+  it('should throw an error when given a non-array', () => {
+    const notAnArray = 'a string instead';
+    expect(squareBrackets.reverse.bind(squareBrackets, notAnArray)).to.throw(`invalid input: expected arr to be an array, but it is of type 'string'`);
   });
 
 });

@@ -9,16 +9,14 @@ describe('first function test', () => {
     expect(element).to.equal(4);
   });
 
-  it('should return an empty array when presented with one', () => {
+  it('should throw an error when presented with an empty array', () => {
     const arr = [];
-    const element = squareBrackets.first(arr);
-    expect(element).to.deep.equal([]);
+    expect(squareBrackets.bifurcate.bind(squareBrackets, arr)).to.throw(`invalid input: expected array length to be > 0, but it is 0`);
   });
 
-  it('should return the original value when it is not an array', () => {
-    const notAnArray = 'a string instead';
-    const returnValue = squareBrackets.first(notAnArray);
-    expect(returnValue).to.equal(notAnArray);
+  it('should throw an error when provided with a non-array', () => {
+    const notAnArr = 'a string instead';
+    expect(squareBrackets.first.bind(squareBrackets, notAnArr)).to.throw();
   });
 
 });

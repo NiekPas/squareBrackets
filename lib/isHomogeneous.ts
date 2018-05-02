@@ -9,7 +9,7 @@ const isArray = require('./isArray');
  */
 const isHomogeneous = function(arr: any[]): boolean {
   if (!isArray(arr)) {
-    return false;
+    throw new Error(`invalid input: expected arr to be an array, but it is of type '${typeof arr}'`);
   }
 
   let homogeneous = true;

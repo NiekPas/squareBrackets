@@ -13,7 +13,7 @@ const isArray = require('./isArray');
 const sample = function(arr: any[], numberOfElements: number = 1): any {
   const sampledElements: any[] = [];
   if (!isArray(arr)) {
-    return arr;
+    throw new Error(`invalid input: expected arr to be an array, but it is of type '${typeof arr}'`);
   }
 
   for (let i = 0; i < numberOfElements; i++) {

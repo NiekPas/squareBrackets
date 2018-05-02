@@ -27,4 +27,9 @@ describe('sort function test', () => {
     expect(sortedArr).to.deep.equal(["sit", "lorem", "ipsum", "elit", "dolor", "consectetur", "amet", "adipiscing"]);
   });
 
+  it('should throw an error when given a non-array', () => {
+    const notAnArray = 'a string instead';
+    expect(squareBrackets.sort.bind(squareBrackets, notAnArray)).to.throw(`invalid input: expected arr to be an array, but it is of type 'string'`);
+  });
+
 });

@@ -59,34 +59,14 @@ describe('split function test', () => {
     );
   });
 
-  it('should return an empty array when given one', () => {
+  it('should throw an error when given a non-array', () => {
     const arr = [];
-    const splitArr = squareBrackets.split(arr);
-    expect(splitArr).to.deep.equal([]);
+    expect(squareBrackets.split.bind(squareBrackets, arr)).to.throw(`invalid input: expected array length to be at least 2, but it is 0`);
   });
 
-  it('should return undefined when given undefined', () => {
-    const arr = undefined;
-    const splitArr = squareBrackets.split(arr);
-    expect(splitArr).to.equal(undefined);
-  });
-
-  it('should return null when given null', () => {
-    const arr = null;
-    const splitArr = squareBrackets.split(arr);
-    expect(splitArr).to.equal(null);
-  });
-
-  it('should return the original value when given a non-array', () => {
-    const arr = "string";
-    const splitArr = squareBrackets.split(arr);
-    expect(splitArr).to.equal("string");
-  });
-
-  it('should return the original value when given an object', () => {
-    const arr = undefined;
-    const splitArr = squareBrackets.split(arr);
-    expect(splitArr).to.equal(undefined);
+  it('should throw an error when given a non-array', () => {
+    const notAnArray = 'a string instead';
+    expect(squareBrackets.split.bind(squareBrackets, notAnArray)).to.throw(`invalid input: expected arr to be an array, but it is of type 'string'`);
   });
 
 });

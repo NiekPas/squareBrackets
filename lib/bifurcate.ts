@@ -11,8 +11,11 @@ const isArray = require('./isArray');
  * one of the values that pass the callback, and one of those that do not.
  */
 const bifurcate = function(arr: any[], callback: (element: any) => boolean): any[] {
-  if (!isArray(arr) || arr.length < 1) {
-    return arr;
+  if (!isArray(arr)) {
+    throw new Error(`invalid input: expected arr to be an array, but it is of type '${typeof arr}'`);
+  }
+  if (arr.length < 1) {
+    throw new Error(`invalid input: expected array length to be > 0, but it is ${arr.length}`);
   }
 
   const trueArray: any[] = [];

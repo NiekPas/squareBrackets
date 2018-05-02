@@ -95,10 +95,15 @@ describe('isEqual function test', () => {
     expect(isEqual).to.equal(false);
   });
 
-  it('should return false when given a non-array', () => {
-    const arr = 2;
-    const isEqual = squareBrackets.isEqual(arr);
-    expect(isEqual).to.equal(false);
+  it('should throw an error when presented with only one value', () => {
+    const arr = [1, 2];
+    expect(squareBrackets.isEqual.bind(squareBrackets, arr)).to.throw('invalid input: please provide two values');
+  });
+
+  it('should throw an error when presented with a non-array', () => {
+    const notAnArray = 'a string instead';
+    const arr = [1, 2];
+    expect(squareBrackets.isEqual.bind(squareBrackets, notAnArray, arr)).to.throw(`invalid input: expected arr1 to be an array, but it is of type 'string'`);
   });
 
 });

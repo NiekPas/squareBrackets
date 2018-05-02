@@ -27,4 +27,9 @@ describe('distinctLength function test', () => {
     expect(arrWithoutDuplicates).to.equal(2);
   });
 
+  it('should throw an error when given an invalid value', () => {
+    const notAnArr = 'not an array';
+    expect(squareBrackets.distinctLength.bind(squareBrackets, notAnArr)).to.throw();
+  });
+
 });

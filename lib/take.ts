@@ -8,7 +8,7 @@ const isArray = require('./isArray');
  */
 const take = function(arr: any[], n: number = 1): any[] {
   if (!isArray(arr)) {
-    return arr;
+    throw new Error(`invalid input: expected arr to be an array, but it is of type '${typeof arr}'`);
   }
   return n === 1 ? arr.slice(0, n)[0] : arr.slice(0, n);
 };

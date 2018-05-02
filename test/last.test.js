@@ -15,10 +15,9 @@ describe('last function test', () => {
     expect(element).to.deep.equal([]);
   });
 
-  it('should return the original value when it is not an array', () => {
+  it('should throw an error when given a non-array', () => {
     const notAnArray = 'a string instead';
-    const returnValue = squareBrackets.last(notAnArray);
-    expect(returnValue).to.equal(notAnArray);
+    expect(squareBrackets.last.bind(squareBrackets, notAnArray)).to.throw(`invalid input: expected arr to be an array, but it is of type 'string'`);
   });
 
 });

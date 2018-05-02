@@ -8,8 +8,11 @@ const isArray = require('./isArray');
  * @returns {any[][]} A new array.
  */
 const map = function(arr: any[], callback: (element: any) => boolean): any[] {
-  if (!isArray(arr) || arr.length < 1) {
-    return arr;
+  if (!isArray(arr)) {
+    throw new Error(`invalid input: expected arr to be an array, but it is of type '${typeof arr}'`);
+  }
+  if (arr.length < 1) {
+    throw new Error(`invalid input: expected array length to be > 0, but it is ${arr.length}`);
   }
 
   // Production steps of ECMA-262, Edition 5, 15.4.4.19

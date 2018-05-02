@@ -11,7 +11,7 @@ const isArray = require('./isArray');
  */
 const sampleDistinct = function(arr: any[], numberOfElements: number = 1): any {
   if (!isArray(arr)) {
-    return arr;
+    throw new Error(`invalid input: expected arr to be an array, but it is of type '${typeof arr}'`);
   }
 
   // If numberOfElements is greater than the number of elements in the array,

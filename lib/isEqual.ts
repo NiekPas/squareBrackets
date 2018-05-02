@@ -15,8 +15,14 @@ const areEqual = require('./_areEqual');
  * @returns {boolean} A boolean indicating whether the two arrays are equal.
  */
 const isEqual = function(arr1: any[], arr2: any[]): boolean {
-  if (!isArray(arr1) || !isArray(arr2)) {
-    return false;
+  if (!(arr1 && arr2)) {
+    throw new Error('invalid input: please provide two values');
+  }
+  if (!isArray(arr1)) {
+    throw new Error(`invalid input: expected arr1 to be an array, but it is of type '${typeof arr1}'`);
+  }
+  if (!isArray(arr2)) {
+    throw new Error(`invalid input: expected arr2 to be an array, but it is of type '${typeof arr2}'`);
   }
   // If two arrays are of unequal length, they cannot be equal.
   if (arr1.length !== arr2.length) {

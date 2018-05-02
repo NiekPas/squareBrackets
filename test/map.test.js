@@ -9,10 +9,9 @@ describe('map function test', () => {
     expect(mappedArr).to.deep.equal([5, 10, 15, 20, 25]);
   });
 
-  it('should return the original value when it is invaled', () => {
+  it('should throw an error when given a non-array', () => {
     const notAnArray = 'a string instead';
-    const returnValue = squareBrackets.map(notAnArray);
-    expect(returnValue).to.equal(notAnArray);
+    expect(squareBrackets.map.bind(squareBrackets, notAnArray)).to.throw(`invalid input: expected arr to be an array, but it is of type 'string'`);
   });
 
 });

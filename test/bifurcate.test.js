@@ -11,16 +11,14 @@ describe('bifurcate function test', () => {
     expect(bifurcatedArray).to.deep.equal([[4, 15, 8, 16], [42, 23]]);
   });
 
-  it('should return an empty array when presented with one', () => {
+  it('should throw an error when presented with an empty array', () => {
     const arr = [];
-    const bifurcatedArray = squareBrackets.bifurcate(arr);
-    expect(bifurcatedArray).to.deep.equal([]);
+    expect(squareBrackets.bifurcate.bind(squareBrackets, arr)).to.throw(`invalid input: expected array length to be > 0, but it is 0`);
   });
 
-  it('should return the original value when it is not an array', () => {
+  it('should throw an error when presented with a non-array', () => {
     const notAnArray = 'a string instead';
-    const returnValue = squareBrackets.bifurcate(notAnArray);
-    expect(returnValue).to.equal(notAnArray);
+    expect(squareBrackets.bifurcate.bind(squareBrackets, notAnArray)).to.throw(`invalid input: expected arr to be an array, but it is of type 'string'`);
   });
 
 });

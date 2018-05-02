@@ -7,7 +7,7 @@ const sampleDistinct = require('./sampleDistinct');
  */
 const shuffle = function(arr: any[]): any {
   if (!isArray(arr)) {
-    return arr;
+    throw new Error(`invalid input: expected arr to be an array, but it is of type '${typeof arr}'`);
   }
 
   const randomElements = sampleDistinct(arr, arr.length);
