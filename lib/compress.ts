@@ -3,7 +3,6 @@ const isArray = require('./isArray');
 /**
  * This function returns a new array with all empty values removed,
  * barring any nested arrays or objects (see also {@link deepCompress}).
- * When supplied with a value that is not an array, it returns the original value.
  * {@link removeEmpty} is an alias to this function.
  * The values considered empty are the following:
  * * `null` and `undefined`.

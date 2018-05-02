@@ -4,8 +4,7 @@ const isArray = require('./isArray');
  * evaluating only a single level of nesting (see {@link isDeeplyHomogeneous}.
  * This function is the inverse of {@link isHeterogeneous}.
  * @param  {any[]} arr The array to be evaluated.
- * @returns boolean A boolean indicating whether the array is Homogeneous,
- * or `false` if the input value is not an array.
+ * @returns boolean A boolean indicating whether the array is Homogeneous
  */
 const isHomogeneous = function(arr: any[]): boolean {
   if (!isArray(arr)) {
